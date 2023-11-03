@@ -56,3 +56,47 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* Estilos comuns */
+.disciplinas-list li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.disciplinas-list a {
+    display: block;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    max-width: 200px; /* Defina a largura máxima desejada */
+    margin: 0 auto; /* Centralize o botão na tela */
+}
+
+.disciplinas-list a:hover {
+    background-color: #2583c7;
+}
+
+/* Estilos específicos para a exibição dos vídeos */
+.videos-container {
+    display: none;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.videos-container a {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.videos-container a:hover {
+    background-color: #2583c7;
+}
