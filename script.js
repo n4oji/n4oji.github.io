@@ -38,7 +38,10 @@ document.addEventListener("DOMContentLoaded", function() {
                         const videoElement = document.createElement("a");
                         videoElement.href = video.url;
                         videoElement.textContent = video.title;
-                        videoElement.target = "_blank"; // Adicione target="_blank" aos links de vídeo
+                        videoElement.addEventListener("click", function(e) {
+                            e.preventDefault();
+                            window.open(video.url, "_blank");
+                        });
                         videosContainer.appendChild(videoElement);
                     });
                     videosContainer.style.display = "block";
