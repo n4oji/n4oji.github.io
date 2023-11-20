@@ -107,6 +107,7 @@ footer img {
     transition: background-color 0.3s;
     background-color: #00994d;
     padding: 5px 10px;
+    text-align: center;
 }
 
 .videos-container a:hover {
