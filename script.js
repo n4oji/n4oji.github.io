@@ -100,7 +100,11 @@ document.addEventListener("DOMContentLoaded", function() {
                         { title: " Tabela Periódica", url: "https://www.youtube.com/watch?v=-NV-P6-yVZU&pp=ygUYcXVpbWljYSAgbWFudWFsIGRvIG11bmRv" },
                         { title: "Bateria de Latinhas", url: "https://www.youtube.com/watch?v=-NV-P6-yVZU&pp=ygUYcXVpbWljYSAgbWFudWFsIGRvIG11bmRv" },
                     ],
-                    // Adicione mais disciplinas e vídeos conforme necessário
+                    "História": [
+                        { title: " Segunda Guerra Mundial", url: "https://youtu.be/TV4Vzda09Ck?si=X19kghSxciatGBcK" },
+                        { title: "A História da Faixa de Gaza", url: "https://youtu.be/XMq8z6QtlMg?si=PAjAi-QOvZuuAtr0" },
+                        { title: "500 anos do Brasil em 1 hora", url: "https://www.youtube.com/watch?v=q7E4XrfGGnE&ab_channel=CanalNostalgia" },
+                    ],
                 };
 
                 // Verifique o estado atual da disciplina
