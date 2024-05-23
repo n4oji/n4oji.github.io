@@ -27,6 +27,12 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
+.icon-flipped {
+  transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+}
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -133,6 +139,10 @@ h6 {
 @media (min-width: 991px) {
   #main {
     margin-left: 100px;
+  }
+  #footer .footer-str, .footer-h3, .social-links, .copyright, .credits {
+    position: relative;
+    width: calc(100% + 100px);
   }
 }
 
@@ -1024,83 +1034,6 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Contact
---------------------------------------------------------------*/
-.contact .info {
-  width: 100%;
-  background: #fff;
-}
-
-.contact .info i {
-  font-size: 20px;
-  color: #ffba3f;
-  float: left;
-  width: 44px;
-  height: 44px;
-  background: #ece0d1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50px;
-  transition: all 0.3s ease-in-out;
-}
-
-.contact .info h4 {
-  padding: 0 0 0 60px;
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 5px;
-  color: #2c456b;
-}
-
-.contact .info p {
-  padding: 0 0 0 60px;
-  margin-bottom: 0;
-  font-size: 14px;
-  color: #728394;
-}
-
-.contact .info .email,
-.contact .info .phone {
-  margin-top: 40px;
-}
-
-.contact .info .email:hover i,
-.contact .info .address:hover i,
-.contact .info .phone:hover i {
-  background: #ffba3f;
-  color: #fff;
-}
-/* Centraliza os ícones e o texto */
-.contact .info i,
-.contact .info h4,
-.contact .info p {
-  display: flex;
-  align-items: center;
-}
-
-/* Espaçamento entre ícone e texto */
-.contact .info h4,
-.contact .info p {
-  margin-left: 10px;
-}
-
-/* Centraliza o conteúdo da seção */
-.contact .info {
-  text-align: center;
-}
-
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 #footer {
@@ -1111,16 +1044,18 @@ section {
   padding: 30px 0;
 }
 
-#footer h3 {
+
+#footer .footer-h3{
   font-size: 36px;
   font-weight: 700;
   position: relative;
   font-family: "Poppins", sans-serif;
   padding: 0;
   margin: 0 0 15px 0;
+  font-weight: bold;
 }
 
-#footer p {
+#footer p .footer-str {
   font-size: 15;
   font-style: italic;
   padding: 0;
