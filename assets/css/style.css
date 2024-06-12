@@ -489,12 +489,15 @@ section {
 --------------------------------------------------------------*/
 .flexicon{
   display: flex;
+  justify-content: center; 
+  flex-wrap: wrap;
 }
 .containericon {
   max-width: 600px;
 	margin: 0 auto;
 }
 .itemicon {
+  /* flex: 0 0 25%; */
   margin: 5px;
 	background: #fff;
 	text-align: center;
@@ -504,6 +507,11 @@ section {
 }
 .itemicon a{
   color: #2c456b;
+}
+@media only screen and (max-width: 768px) {
+  .itemicon {
+    flex: 0 0 15%; /* Quando a tela for menor que 768px, os ícones ocuparão 50% da largura da tela */
+  }
 }
 
 /* .skills .progress {
@@ -1068,7 +1076,7 @@ section {
 }
 
 #footer .social-links {
-  margin: 0 0 40px 0;
+  margin: 0 0 0 0;
 }
 
 #footer .social-links a {
@@ -1098,4 +1106,18 @@ section {
 
 #footer .credits {
   font-size: 13px;
+}
+
+#footer .ko-fi {
+  display: inline-block;
+  padding: 8px;
+  align-items: center;
+  justify-content: center;
+  
+  transition: 0.3s;
+}
+@media (min-width: 992px) {
+  .ko-fi {
+    width: 85px;
+  }
 }
