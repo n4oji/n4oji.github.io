@@ -6,7 +6,12 @@ body {
   color: #2c456b;
 }
 
-
+#gabi {
+  color: #2c456b;
+}
+#gabi:hover{
+  color:#ff6f61;
+}
 
 a {
   color: #ffba3f;
