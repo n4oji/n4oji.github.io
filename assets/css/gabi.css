@@ -1,5 +1,50 @@
 /* Estilos gerais */
+/* Página de entrada */
+#password-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #ff6f61;
+    color: #fff;
+}
 
+#password-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#password {
+    font-size: 24px;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+}
+
+#keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.key, #clear, #enter {
+    font-size: 24px;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    color: #ff6f61;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.key:hover, #clear:hover, #enter:hover {
+    background: #ffd4d1;
+}
 
 body {
     font-family: 'Poppins', sans-serif;

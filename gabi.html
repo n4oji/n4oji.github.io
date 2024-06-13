@@ -1,40 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+        
+    <link href="assets\img\favicon\Favicon_Portfolio_Naoji-16.png" rel="icon" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Surpresa para Minha Namorada</title>
     <link href="assets/css/gabi.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Para Minha Namorada</h1>
-    </header>
-
-    <main>
-        <section class="gallery">
-            <h2>Nossas Memórias</h2>
-            <div class="photos">
-                <img src="foto1.jpg" alt="Foto 1">
-                <img src="foto2.jpg" alt="Foto 2">
-                <img src="foto3.jpg" alt="Foto 3">
-                <!-- Adicione mais fotos conforme necessário -->
+    <!-- Página de Entrada -->
+    <div id="password-screen">
+        <h2>Insira a senha para acessar</h2>
+        <div id="password-input">
+            <input type="password" id="password" readonly>
+            <div id="keypad">
+                <button class="key">1</button>
+                <button class="key">2</button>
+                <button class="key">3</button>
+                <button class="key">4</button>
+                <button class="key">5</button>
+                <button class="key">6</button>
+                <button class="key">7</button>
+                <button class="key">8</button>
+                <button class="key">9</button>
+                <button id="clear">C</button>
+                <button class="key">0</button>
+                <button id="enter">Enter</button>
             </div>
-        </section>
+        </div>
+    </div>
 
-        <section class="letter">
-            <h2>Uma Carta para Você</h2>
-            <div class="letter-content">
-                <p>Querida,</p>
-                <p>Você significa o mundo para mim...</p>
-                <!-- Adicione o restante da carta aqui -->
-            </div>
-        </section>
-    </main>
+    <!-- Conteúdo Principal -->
+    <div id="main-content" style="display: none;">
+        <header>
+            <h1>Para Minha Namorada</h1>
+        </header>
 
-    <footer>
-        <p>Com amor, [Seu Nome]</p>
-    </footer>
+        <main>
+            <section class="gallery">
+                <h2>Nossas Memórias</h2>
+                <div class="photos">
+                    <img src="foto1.jpg" alt="Foto 1">
+                    <img src="foto2.jpg" alt="Foto 2">
+                    <img src="foto3.jpg" alt="Foto 3">
+                    <!-- Adicione mais fotos conforme necessário -->
+                </div>
+            </section>
+
+            <section class="letter">
+                <h2>Uma Carta para Você</h2>
+                <div class="letter-content">
+                    <p>Querida,</p>
+                    <p>Você significa o mundo para mim...</p>
+                    <!-- Adicione o restante da carta aqui -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Com amor, [Seu Nome]</p>
+        </footer>
+    </div>
 
     <script src="assets/js/gabi.js"></script>
 </body>
