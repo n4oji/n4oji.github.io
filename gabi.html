@@ -1,19 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-        
+
     <link href="assets\img\favicon\Favicon_Portfolio_Naoji-16.png" rel="icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Surpresa para Minha Namorada</title>
     <link href="assets/css/gabi.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fascinate&family=Goldman:wght@400;700&family=Michroma&family=Orbitron:wght@400;600;800;900&family=Zen+Dots&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <!-- Página de Entrada -->
     <div id="password-screen">
-        <h2>Insira a senha para acessar</h2>
+        <h2>Access Required
+            <div class='tooltip'>
+                <i class="material-icons">info_outline</i>
+                <span class="tooltiptext">nossa data</span>
+            </div>
+        </h2>
         <div id="password-input">
+
             <input type="password" id="password" readonly>
+
+
             <div id="keypad">
                 <button class="key">1</button>
                 <button class="key">2</button>
@@ -24,7 +41,7 @@
                 <button class="key">7</button>
                 <button class="key">8</button>
                 <button class="key">9</button>
-                <button id="clear">C</button>
+                <button id="clear">Clear</button>
                 <button class="key">0</button>
                 <button id="enter">Enter</button>
             </div>
@@ -32,37 +49,106 @@
     </div>
 
     <!-- Conteúdo Principal -->
-    <div id="main-content" style="display: none;">
-        <header>
-            <h1>Para Minha Namorada</h1>
-        </header>
-
-        <main>
-            <section class="gallery">
-                <h2>Nossas Memórias</h2>
-                <div class="photos">
-                    <img src="foto1.jpg" alt="Foto 1">
-                    <img src="foto2.jpg" alt="Foto 2">
-                    <img src="foto3.jpg" alt="Foto 3">
-                    <!-- Adicione mais fotos conforme necessário -->
+    <div id="main-content" style="display: none;" class="boddy">
+        <!-- <div id="main-content" class="boddy"> -->
+        <section>
+            <div class="dashboard">
+                <div class="window-bar">
+                    <p>Gabrielle Lie Takatsuka Fukamati!</p>
                 </div>
-            </section>
 
-            <section class="letter">
-                <h2>Uma Carta para Você</h2>
-                <div class="letter-content">
-                    <p>Querida,</p>
-                    <p>Você significa o mundo para mim...</p>
-                    <!-- Adicione o restante da carta aqui -->
+                <div class="profile">
+                    <h2 class="title">Enfim 1 ano...</h2>
+                    <p class="text">E para comemorar essa data tão especial, preparei uma surpresa especial para você!
+                        🌞</p>
                 </div>
-            </section>
-        </main>
 
-        <footer>
-            <p>Com amor, [Seu Nome]</p>
-        </footer>
+                <div class="tabs">
+                    <button class="tab" onclick="openCity(event, 'Schedule')">Placeholder</button>
+                    <button class="tab" onclick="openCity(event, 'Exercise')">Placeholder</button>
+                    <button class="tab" onclick="openCity(event, 'Calories')">Placeholder</button>
+                    <button class="tab" onclick="openCity(event, 'Personal-bests')">Placeholder</button>
+                    <button class="tab" onclick="openCity(event, 'Challenges')">Placeholder</button>
+                    <button class="tab" onclick="openCity(event, 'Activity-feed')">Placeholder</button>
+                </div>
+            </div>
+
+            <div id="Schedule" class="tabcontent">
+                <div class="item-bar">
+                    <h3>Placeholder</h3>
+                    <span onclick="this.parentElement.parentElement.style.display='none'" class="topright">
+                        X
+                    </span>
+                </div>
+
+                <div class="inside">
+                    <h2>Placeholder</h2>
+
+                </div>
+            </div>
+
+            <div id="Exercise" class="tabcontent">
+                <div class="item-bar">
+                    <h3>Exercise</h3>
+                    <span onclick="this.parentElement.parentElement.style.display='none'" class="topright">
+                        X
+                    </span>
+                </div>
+
+                <div class="inside">
+                    <h2>Placeholder</h2>
+
+                </div>
+            </div>
+
+            <div id="Calories" class="tabcontent">
+                <div class="item-bar">
+                    <h3>Placeholder</h3>
+                    <span onclick="this.parentElement.parentElement.style.display='none'" class="topright">
+                        X
+                    </span>
+                </div>
+
+                <div class="inside">
+                    <div><strong>Today:</strong> 500</div>
+
+                </div>
+            </div>
+
+            <div id="Personal-bests" class="tabcontent">
+                <div class="item-bar">
+                    <h3>Placeholder</h3>
+                    <span onclick="this.parentElement.parentElement.style.display='none'" class="topright">
+                        X
+                    </span>
+                </div>
+
+
+            </div>
+
+            <div id="Challenges" class="tabcontent">
+                <div class="item-bar">
+                    <h3>Placeholder</h3>
+                    <span onclick="this.parentElement.parentElement.style.display='none'" class="topright">
+                        X
+                    </span>
+                </div>
+
+            </div>
+
+            <div id="Activity-feed" class="tabcontent">
+                <div class="item-bar">
+                    <h3>Placeholder</h3>
+                    <span onclick="this.parentElement.parentElement.style.display='none'" class="topright">
+                        X
+                    </span>
+                </div>
+
+            </div>
+        </section>
     </div>
 
     <script src="assets/js/gabi.js"></script>
 </body>
+
 </html>
