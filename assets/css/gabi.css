@@ -1,5 +1,4 @@
-/* Estilos gerais */
-/* Página de entrada */
+
 html, body {
   height: 100%;
 }
@@ -17,7 +16,6 @@ html, body {
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
-  
   position: absolute;
   z-index: 1;
   top: -5px;
@@ -84,15 +82,15 @@ html, body {
 }
 
 .boddy {
-    background: radial-gradient(circle, rgba(232,232,232,1) 0%, rgba(172,255,63,1) 37%, rgba(199,255,102,1) 48%, rgba(255,102,193,1) 65%, rgba(254,170,255,1) 80%, rgba(150,138,255,1) 94%);
-	display: flex !important;
+  background: radial-gradient(circle, rgba(232,232,232,1) 0%, rgba(172,255,63,1) 37%, rgba(199,255,102,1) 48%, rgba(255,102,193,1) 65%, rgba(254,170,255,1) 80%, rgba(150,138,255,1) 94%);
+	display: flex;
 	justify-content: center;
 	align-content: center;
-    position: relative;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    min-height: 100%;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 100%;
 }
 
 :root {
@@ -216,4 +214,118 @@ section {
 		.tab {
 				margin-bottom: 0;
 		}
+}
+
+
+.y2k-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.y2k-content img, .y2k-content gif {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.y2k-content img:hover, .y2k-content gif:hover {
+    transform: scale(1.1);
+}
+@media screen and (max-width: 770px) {
+    .y2k-content {
+        display: none; /* Altere para o estilo desejado para telas menores */
+        padding: 0; /* Remova ou ajuste o padding conforme necessário */
+        justify-content: initial; /* Remova ou ajuste conforme necessário */
+        gap: 0; /* Remova ou ajuste o gap conforme necessário */
+    }
+
+    .y2k-content img,
+    .y2k-content gif {
+        max-width: none; /* Remova ou ajuste conforme necessário */
+        height: auto; /* Mantenha ou ajuste conforme necessário */
+        transition: none; /* Remova ou ajuste conforme necessário */
+    }
+
+    .y2k-content img:hover,
+    .y2k-content gif:hover {
+        transform: none; /* Remova ou ajuste conforme necessário */
+    }
+}
+
+/* CONTAINER */
+#container {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 10px;
+	width: 100%;
+	gap: 10px;
+}
+/* CONTAINER IMAGE */
+#container #image {
+	width: 270px;
+	object-fit: cover;
+	transition: 0.3s;
+	border-radius: 5px;
+}
+#container #image:hover {
+	transform: scale(1.05);
+}
+
+.caixinha {
+    background-image: url("../img/gabi/eevee.jpg");
+    width: 300px;
+    height: 200px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.caixinha:hover {
+    transform: scale(1.05);
+}
+
+.conteudo {
+    text-align: center;
+     text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+               1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+
+}
+
+.conteudo p {
+    font-size: 18px;
+    color: #333;
+    font-family: 'Michroma';
+
+
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.popup .conteudo-popup {
+    text-align: center;
+    font-family: 'Michroma';
+}
+
+.popup .fechar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #888;
 }

@@ -56,8 +56,19 @@
     </div>
 
     <!-- Conteúdo Principal -->
-    <!-- <div id="main-content" style="display: none;" class="boddy"> -->
-    <div id="main-content" class="boddy">
+    <div id="main-content" style="display: none;" class="boddy">
+        <!-- <div id="main-content" class="boddy"> -->
+        <div id="y2k-content" class="y2k-content" style="width: 500px;">
+            <figure class="gif">
+                <img src="assets/img/gabi/bee.gif">
+            </figure>
+            <figure class="gif" style="width: 250px;">
+                <img src="assets/img/gabi/windows.jpeg">
+            </figure>
+            <figure class="gif">
+                <img src="assets/img/gabi/download.gif">
+            </figure>
+        </div>
         <section>
             <div class="dashboard">
                 <div class="window-bar">
@@ -72,9 +83,9 @@
 
                 <div class="tabs">
                     <button class="tab" onclick="openCity(event, 'Cartinha')">Cartinha</button>
-                    <button class="tab" onclick="openCity(event, 'Exercise')">2</button>
-                    <button class="tab" onclick="openCity(event, 'Calories')">3</button>
-                    <button class="tab" onclick="openCity(event, 'Personal-bests')">4</button>
+                    <button class="tab" onclick="openCity(event, 'Surpresa')">Supresa</button>
+                    <button class="tab" onclick="openCity(event, 'Datas')">2 anos</button>
+                    <button class="tab" onclick="openCity(event, 'Galeria')">Galeria</button>
                     <button class="tab" onclick="openCity(event, 'Player')">Player</button>
                     <button class="tab" onclick="openCity(event, 'Playlist')">Playlist</button>
                 </div>
@@ -128,42 +139,60 @@
                 </div>
             </div>
 
-            <div id="Exercise" class="tabcontent">
+            <div id="Surpresa" class="tabcontent">
                 <div class="item-bar">
-                    <h3>Exercise</h3>
+                    <h3>Surpresa!</h3>
                     <span onclick="this.parentElement.parentElement.style.display='none'" class="topright">
                         X
                     </span>
                 </div>
 
-                <div class="inside">
-                    <h2>Placeholder</h2>
+                <div class="inside" style="display: grid; place-items: center; padding: 20px;">
+                    <div class="caixinha" onclick="abrirSurpresa()">
+                        <div class="conteudo">
+                            Clique para uma surpresa!
+                        </div>
+                    </div>
 
                 </div>
             </div>
 
-            <div id="Calories" class="tabcontent">
+            <div id="Datas" class="tabcontent">
+                <div class="item-bar">
+                    <h3>Contador</h3>
+                    <span onclick="this.parentElement.parentElement.style.display='none'" class="topright">
+                        X
+                    </span>
+                </div>
+                <div class="inside">
+                    <div id="countdown">
+                        <b>2 anos</b>
+                        <div id="countdown-timer"></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="Galeria" class="tabcontent">
                 <div class="item-bar">
                     <h3>Placeholder</h3>
                     <span onclick="this.parentElement.parentElement.style.display='none'" class="topright">
                         X
                     </span>
                 </div>
-
                 <div class="inside">
-                    <div><strong>Today:</strong> 500</div>
 
+
+                    <div id="container">
+                        <img id="image" src="assets/img/gabi/1.jpg">
+                        <img id="image" src="assets/img/gabi/2.jpg">
+                        <img id="image" src="assets/img/gabi/3.jpg">
+                        <img id="image" src="assets/img/gabi/4.jpg">
+                        <img id="image" src="assets/img/gabi/5.jpg">
+                        <img id="image" src="assets/img/gabi/6.jpg">
+
+                    </div>
                 </div>
-            </div>
-
-            <div id="Personal-bests" class="tabcontent">
-                <div class="item-bar">
-                    <h3>Placeholder</h3>
-                    <span onclick="this.parentElement.parentElement.style.display='none'" class="topright">
-                        X
-                    </span>
-                </div>
-
 
             </div>
 
@@ -200,6 +229,17 @@
 
             </div>
         </section>
+        <div id="y2k-content" class="y2k-content" style="width: 500px;">
+            <figure class="gif" style="height: fit-content;">
+                <img src="assets/img/gabi/heart.gif">
+            </figure>
+            <figure class="gif" style="transform: scale(0.25); height: 50px;">
+                <img src="assets/img/gabi/star.gif">
+            </figure>
+            <figure class="gif">
+                <img src="assets/img/gabi/phone.gif">
+            </figure>
+        </div>
     </div>
 
     <script src="assets/js/randomizeCursor.js"></script>
