@@ -15,6 +15,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Fascinate&family=Goldman:wght@400;700&family=Michroma&family=Orbitron:wght@400;600;800;900&family=Zen+Dots&display=swap"
         rel="stylesheet">
+    <style>
+        body,
+        a,
+        button {
+            cursor: url('cursors/default.cur'), auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -64,16 +71,16 @@
                 </div>
 
                 <div class="tabs">
-                    <button class="tab" onclick="openCity(event, 'Schedule')">Placeholder</button>
-                    <button class="tab" onclick="openCity(event, 'Exercise')">Placeholder</button>
-                    <button class="tab" onclick="openCity(event, 'Calories')">Placeholder</button>
-                    <button class="tab" onclick="openCity(event, 'Personal-bests')">Placeholder</button>
-                    <button class="tab" onclick="openCity(event, 'Challenges')">Placeholder</button>
+                    <button class="tab" onclick="openCity(event, 'Cartinha')">Cartinha</button>
+                    <button class="tab" onclick="openCity(event, 'Exercise')">2</button>
+                    <button class="tab" onclick="openCity(event, 'Calories')">3</button>
+                    <button class="tab" onclick="openCity(event, 'Personal-bests')">4</button>
+                    <button class="tab" onclick="openCity(event, 'Player')">Player</button>
                     <button class="tab" onclick="openCity(event, 'Playlist')">Playlist</button>
                 </div>
             </div>
 
-            <div id="Schedule" class="tabcontent">
+            <div id="Cartinha" class="tabcontent">
                 <div class="item-bar">
                     <h3>Placeholder</h3>
                     <span onclick="this.parentElement.parentElement.style.display='none'" class="topright">
@@ -82,7 +89,41 @@
                 </div>
 
                 <div class="inside">
-                    <h2>Placeholder</h2>
+                    <h2>BiBi,</h2>
+                    <br>
+                    <p>Faz 1 ano que estamos juntos!
+                        <br><br>
+                        E mesmo assim consigo sentir que já estamos juntos há 5
+                        anos, né? Parece que foi ontem que tivemos nosso primeiro match no tinder e eu já sabia que você
+                        era especial.
+                        <br><br>
+                        Lembrar do nosso primeiro encontro… é engraçado pensar que o Pyong nos uniu e o que te marcou
+                        nesse dia foi a empada (o que me marcou foi que roubaram meu café). E quando você quase
+                        atropelou várias pessoas no Ibira, eu percebi o quanto sou sortudo por ter você ao meu lado (e
+                        não na minha frente).
+                        <br><br>
+                        Cada dia ao seu lado tem sido uma nova aventura. Adoro como rimos das coisas mais bobas, como
+                        você sempre sabe o que dizer quando eu estou pra baixo, e como cada momento simples vira
+                        especial com você.
+                        <br><br>
+                        Outro momento querido foi quando a gente veio pela primeira vez para o Butantã, apesar de tudo
+                        que houve no dia, senti que nós ficamos muito próximos.
+                        <br><br>
+                        Obrigado por ser minha parceira em tudo, por me entender, me apoiar e me fazer
+                        tão feliz. Você é a melhor parte dos meus dias e, com você, tudo fica melhor.Vamos continuar
+                        criando memórias
+                        incríveis juntos.
+                        <br><br>
+                        Este é só o começo da nossa jornada e eu mal posso esperar para ver o que o futuro nos reserva.
+                        (na vdd vc
+                        vai me levar pro Japão)
+                        <br><br>
+                        Te amo muito!
+                        <br><br>
+                        Beijos,
+                        <br><br>
+                        <strong>Nana</strong>
+                    </p>
 
                 </div>
             </div>
@@ -126,12 +167,18 @@
 
             </div>
 
-            <div id="Challenges" class="tabcontent">
+            <div id="Player" class="tabcontent">
                 <div class="item-bar">
                     <h3>Placeholder</h3>
                     <span onclick="this.parentElement.parentElement.style.display='none'" class="topright">
                         X
                     </span>
+                </div>
+                <div class="inside">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/hLvWy2b857I?si=fEcmKKbE8_k7Oro6"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
 
             </div>
@@ -155,6 +202,7 @@
         </section>
     </div>
 
+    <script src="assets/js/randomizeCursor.js"></script>
     <script src="assets/js/gabi.js"></script>
 </body>
 
