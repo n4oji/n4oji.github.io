@@ -39,28 +39,27 @@
     <nav id="navbar" class="navbar nav-menu">
       <ul>
         <li>
-          <a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i>
-            <span id="home_button">Início</span></a>
+          <a id="home_button" href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i>
+            <span>Início</span></a>
         </li>
         <li>
-          <a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i>
-            <span id="about_button">Sobre</span></a>
+          <a id="about_button" href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Sobre</span></a>
         </li>
         <li>
-          <a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i>
-            <span id="resume_button">Currículo</span></a>
+          <a id="resume_button" href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i>
+            <span>Currículo</span></a>
         </li>
         <li>
-          <a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i>
-            <span id="portfolio_button">Portfólio</span></a>
+          <a id="portfolio_button" href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i>
+            <span>Portfólio</span></a>
         </li>
         <li>
-          <a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i>
-            <span id="services_button">Serviços</span></a>
+          <a id="services_button" href="#services" class="nav-link scrollto"><i class="bx bx-server"></i>
+            <span>Serviços</span></a>
         </li>
         <li>
-          <a id="lang-toggle" class="nav-link ">
-            EN</a>
+          <a id="lang_button" href="" class="nav-link scrollto"><i class="bx bx-envelope"></i>
+            <span><button id="lang-toggle">English</button></span></a>
         </li>
       </ul>
     </nav>
@@ -93,7 +92,10 @@
         <div class="section-title">
           <h2 id="about_section">Sobre</h2>
           <p id="about_text">
-
+            Olá! Sou {naoji}, um desenvolvedor de software apaixonado por
+            criar soluções inovadoras. Meu objetivo é transformar códigos em
+            ideias relevantes para pessoas e negócios. Estou aberto a
+            colaborações, oportunidades ou apenas para bater um papo!
           </p>
         </div>
 
@@ -421,9 +423,9 @@
               </p>
             </div>
 
-            <h3 id="resume_degree" class="resume-title">Formação</h3>
+            <h3 id="about_degree" class="resume-title">Formação</h3>
             <div class="resume-item">
-              <h4 id="resume_degree_text">Bacharel em Ciência e Tecnologia</h4>
+              <h4 id="about_degree_text">Bacharel em Ciência e Tecnologia</h4>
               <h5>2017 - 2023</h5>
               <p>
                 <em id="resume_university">Universidade Federal do ABC</em>
@@ -474,8 +476,8 @@
                 </li>
                 <li id="resume_experience_1_5">
                   Alguns clientes com quem trabalhei:
+                  <b id="resume_experience_1_5_1">Santher, Revista Raça, Cruzeiro do Sul, Brastemp</b>.
                 </li>
-                <b id="resume_experience_1_5_1">Santher, Revista Raça, Cruzeiro do Sul, Brastemp</b>
               </ul>
             </div>
             <div class="resume-item">
@@ -522,43 +524,146 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/app_1.png" class="img-fluid" alt="" />
-              <a href="port_details\pomodoro.html" class="portfolio-details-lightbox" data-glightbox="type: external"
-                title="Portfolio Details">
-                <div class="portfolio-info">
-                  <h4>Pomodoro</h4>
-                  <p>App</p>
+              <div class="portfolio-info">
+                <h4>Pomodoro</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/app_1.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                    title="App 1"><i class="bx bx-plus"></i></a>
+                  <a href="port_details\pomodoro.html" class="portfolio-details-lightbox"
+                    data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
                 </div>
-              </a>
+              </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-api">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/api_1.webp" class="img-fluid" alt="" />
-              <a href="port_details\flask.html" class="portfolio-details-lightbox" data-glightbox="type: external"
-                title="Portfolio Details">
-                <div class="portfolio-info">
-                  <h4>Flask Api</h4>
-                  <p>Api</p>
+              <div class="portfolio-info">
+                <h4>Flask Api</h4>
+                <p>Api</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/api_1.webp" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                    title="Api 1"><i class="bx bx-plus"></i></a>
+                  <a href="port_details\flask.html" class="portfolio-details-lightbox" data-glightbox="type: external"
+                    title="Portfolio Details"><i class="bx bx-link"></i></a>
                 </div>
-              </a>
+              </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 2</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery"
+                    class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external"
+                    title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Card 2</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery"
+                    class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external"
+                    title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-              <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external"
-                title="Portfolio Details">
-                <div class="portfolio-info">
-                  <h4>Django Pokedex</h4>
-                  <p>Web</p>
+              <div class="portfolio-info">
+                <h4>Web 2</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery"
+                    class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external"
+                    title="Portfolio Details"><i class="bx bx-link"></i></a>
                 </div>
-              </a>
+              </div>
             </div>
-          </div>
+          </div> -->
 
+          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 3</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery"
+                    class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external"
+                    title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div> -->
 
+          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Card 1</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery"
+                    class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external"
+                    title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Card 3</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery"
+                    class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external"
+                    title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery"
+                    class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external"
+                    title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -803,7 +908,6 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/lang.js"></script>
 </body>
 
 </html>
