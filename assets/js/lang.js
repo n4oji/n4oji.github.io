@@ -89,39 +89,10 @@ function loadLanguage(lang) {
             document.getElementById('services_portfolio_text').textContent = data.services_portfolio_text;
 
             document.getElementById('testimonial_section').textContent = data.testimonial_section;
-            document.getElementById('testimonial_person1').textContent = data.testimonial_person1;
-            document.getElementById('testimonial_person1_role').textContent = data.testimonial_person1_role;
-            document.getElementById('testimonial_person1_text').textContent = data.testimonial_person1_text;
-            document.getElementById('testimonial_person2').textContent = data.testimonial_person2;
-            document.getElementById('testimonial_person2_role').textContent = data.testimonial_person2_role;
-            document.getElementById('testimonial_person2_text').textContent = data.testimonial_person2_text;
-            document.getElementById('testimonial_person3').textContent = data.testimonial_person3;
-            document.getElementById('testimonial_person3_role').textContent = data.testimonial_person3_role;
-            document.getElementById('testimonial_person3_text').textContent = data.testimonial_person3_text;
+
             
             document.getElementById('footer_text').textContent = data.footer_text;
 
-            if (swiperInstance) {
-                swiperInstance.destroy(true, true);
-            }
-
-            // Inicializar novamente o Swiper após a tradução
-            swiperInstance = new Swiper('.testimonials-slider', {
-                speed: 600,
-                loop: true,
-                autoplay: {
-                delay: 5000,
-                disableOnInteraction: true
-                },
-                slidesPerView: 'auto',
-                pagination: {
-                el: '.swiper-pagination',
-                type: 'bullets',
-                clickable: true
-                },
-                slidesPerView: 1,
-
-            });
         
         })
         .catch(error => console.error('Error loading translation:', error));

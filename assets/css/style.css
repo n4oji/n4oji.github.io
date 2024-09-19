@@ -982,13 +982,16 @@ section {
 
 .testimonials .testimonial-item {
   text-align: center;
+  padding: 20px;
 }
 
 .testimonials .testimonial-item .testimonial-img {
   width: 120px;
+  height: 120px;
+  object-fit: cover;
   border-radius: 50%;
   border: 4px solid #fff;
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
 }
 
 .testimonials .testimonial-item h3 {
