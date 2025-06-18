@@ -257,12 +257,12 @@ document.head.insertAdjacentHTML('beforeend', `
 // Funções para a galeria modal
 let currentImageIndex = 0;
 const galleryImages = [
-    {src: 'assets/img/gabi/1.jpg', caption: 'Nosso primeiro encontro'},
-    {src: 'assets/img/gabi/2.jpg', caption: 'Aquele dia especial'},
-    {src: 'assets/img/gabi/3.jpg', caption: 'Momentos felizes'},
-    {src: 'assets/img/gabi/4.jpg', caption: 'Te amando'},
-    {src: 'assets/img/gabi/5.jpg', caption: 'Juntos sempre'},
-    {src: 'assets/img/gabi/6.jpg', caption: 'Para sempre'}
+    {src: 'assets/img/gabi/1.jpg', caption: 'Nossa primeira viagem de avião juntos'},
+    {src: 'assets/img/gabi/2.jpg', caption: 'Coraçãozinho ❤️'},
+    {src: 'assets/img/gabi/3.jpg', caption: 'Dia que tive dor de barriga'},
+    {src: 'assets/img/gabi/4.jpg', caption: 'Girassol 🌻'},
+    {src: 'assets/img/gabi/5.jpg', caption: 'Primeira Maratona'},
+    {src: 'assets/img/gabi/6.jpg', caption: 'Dia de ficar queimado'}
 ];
 
 // Função para abrir o modal da galeria
