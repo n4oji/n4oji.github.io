@@ -1,0 +1,56 @@
+/* Regras de responsividade para garantir que o gradiente fique consistente */
+@media screen and (max-width: 768px) {
+  html,
+  body {
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: 400% 400%;
+    animation: gradient-animation 20s ease infinite;
+  }
+
+  /* As propriedades de gradiente da .boddy foram movidas para html, body */
+
+  section {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .dashboard,
+  .tabcontent {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .y2k-content {
+    max-width: 100% !important;
+    padding: 10px;
+  }
+
+  .y2k-content figure {
+    max-width: 100%;
+  }
+
+  .y2k-content img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Evitar que o gradiente mude em orientações diferentes */
+@media screen and (orientation: portrait) {
+  html,
+  body {
+    background-size: 400% 400%;
+    background-position: center center;
+    animation: gradient-animation 25s ease infinite;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  html,
+  body {
+    background-size: 400% 400%;
+    background-position: center center;
+    animation: gradient-animation 15s ease infinite;
+  }
+}

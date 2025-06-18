@@ -1,0 +1,80 @@
+/* 
+ * Arquivo específico para controlar o gradiente animado do site
+ * Este arquivo define o gradiente que se move constantemente em todo o site
+ */
+
+/* Animação para o gradiente - movimento mais pronunciado */
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 0%;
+  }
+  20% {
+    background-position: 50% 50%;
+  }
+  40% {
+    background-position: 100% 0%;
+  }
+  60% {
+    background-position: 50% 100%;
+  }
+  80% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/* Aplicando o gradiente de forma consistente em toda a página */
+html,
+body {
+  background: linear-gradient(
+    45deg,
+    rgba(255, 102, 193, 1) 0%,
+    rgba(150, 138, 255, 1) 30%,
+    rgba(102, 204, 255, 1) 50%,
+    rgba(172, 255, 63, 1) 70%,
+    rgba(255, 105, 180, 1) 100%
+  );
+  background-attachment: fixed;
+  background-size: 400% 400%;
+  animation: gradient-animation 15s ease-in-out infinite;
+  min-height: 100vh;
+  overflow-x: hidden;
+  will-change: background-position; /* Melhora performance da animação */
+}
+
+/* Garantindo que o gradiente apareça no modo de tela cheia */
+body.fullscreen-mode {
+  background-attachment: fixed;
+  background-size: 400% 400%;
+  animation: gradient-animation 15s ease infinite;
+}
+
+/* Aplicar o mesmo gradiente para o password-screen e main-content */
+#password-screen,
+#main-content {
+  background: transparent; /* Permite que o gradiente do corpo apareça */
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  html,
+  body {
+    animation: gradient-animation 20s ease infinite;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  html,
+  body {
+    animation: gradient-animation 25s ease infinite;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html,
+  body {
+    background-size: 300% 300%; /* Ligeiramente menor para dispositivos menores */
+  }
+}

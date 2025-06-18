@@ -1,0 +1,239 @@
+/* Estilos para os pop-ups modais */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.modal-overlay.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+}
+
+.modal-container {
+  position: relative;
+  width: 90%;
+  max-width: 700px;
+  max-height: 85vh;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 102, 193, 0.85) 0%,
+    rgba(150, 138, 255, 0.85) 50%,
+    rgba(255, 105, 180, 0.85) 100%
+  );
+  border: 3px solid black;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  animation: modal-pop 0.4s forwards;
+}
+
+@keyframes modal-pop {
+  0% {
+    transform: scale(0.8);
+  }
+  70% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.modal-header {
+  background-color: var(--c-blue);
+  border-bottom: 2px solid black;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h3 {
+  color: white;
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  font-family: "Michroma";
+}
+
+.modal-close {
+  font-family: "Michroma";
+  background-color: var(--c-hot-pink);
+  border: 2px solid black;
+  color: white;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+  background-color: var(--c-gold);
+  transform: scale(1.1);
+}
+
+.modal-body {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 15px;
+  overflow-y: auto;
+  max-height: calc(85vh - 50px);
+}
+
+/* Animação para quando o modal é aberto */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animação para quando o modal é fechado */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.3s forwards;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .modal-container {
+    width: 95%;
+  }
+
+  .modal-body {
+    max-height: calc(85vh - 60px);
+    padding: 10px;
+  }
+}
+
+/* Estilos específicos para galeria dentro do modal */
+.modal-body .gallery-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 15px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.modal-body .gallery-item {
+  cursor: pointer !important;
+  transform: none;
+  animation: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  opacity: 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  will-change: transform;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.modal-body .gallery-item:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.modal-body .gallery-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  transform: translateZ(0);
+  transition: transform 0.3s ease;
+  cursor: pointer !important;
+}
+
+.modal-body .gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.modal-body .gallery-caption {
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 5px;
+  font-size: 12px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal-body .gallery-item:hover .gallery-caption {
+  opacity: 1;
+}
+
+/* Garantir que o modal da galeria (o visualizador da imagem) fique acima de tudo */
+#gallery-modal {
+  z-index: 2000 !important;
+}
+
+/* Garantir que botões de navegação da galeria funcionem e apareçam */
+.gallery-modal-navigation {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.gallery-nav-btn {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0 15px;
+  pointer-events: auto;
+  opacity: 0.8;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.gallery-nav-btn:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.8);
+}

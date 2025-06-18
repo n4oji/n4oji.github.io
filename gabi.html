@@ -2,14 +2,21 @@
 <html lang="pt-br">
 
 <head>
-
     <link href="assets\img\favicon\Favicon_Portfolio_Naoji-16.png" rel="icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Surpresa para Minha Namorada</title>
+    <link href="assets/css/gradient.css" rel="stylesheet">
     <link href="assets/css/gabi.css" rel="stylesheet">
+    <link href="assets/css/gabi-responsive.css" rel="stylesheet">
+    <link href="assets/css/gallery-styles.css" rel="stylesheet">
+    <link href="assets/css/modal.css" rel="stylesheet">
+    <link href="assets/css/password.css" rel="stylesheet">
+    <link href="assets/css/date-generator.css" rel="stylesheet">
+    <link href="assets/css/countdown.css" rel="stylesheet">
+    <link href="assets/css/radio.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -27,11 +34,10 @@
 <body>
     <!-- Página de Entrada -->
     <div id="password-screen">
-        <h2>Access Required
-            <div class='tooltip'>
-                <i class="material-icons">info_outline</i>
-                <span class="tooltiptext">nossa data</span>
-            </div>
+        <h2 style="margin-bottom: 20px; font-family: 'Orbitron', sans-serif; letter-spacing: 2px; font-size: 32px;">
+            <span style="color: #ffd700; text-shadow: 0 0 10px #ffd700;">♥</span>
+            Access Required
+            <span style="color: #ffd700; text-shadow: 0 0 10px #ffd700;">♥</span>
         </h2>
         <div id="password-input">
 
@@ -56,38 +62,46 @@
     </div>
 
     <!-- Conteúdo Principal -->
-    <div id="main-content" style="display: none;" class="boddy">
+    <div id="main-content" style="display: none; opacity: 0; transition: all 0.8s ease;" class="boddy">
         <!-- <div id="main-content" class="boddy"> -->
-        <div id="y2k-content" class="y2k-content" style="width: 500px;">
-            <figure class="gif">
-                <img src="assets/img/gabi/bee.gif">
-            </figure>
-            <figure class="gif" style="width: 250px;">
-                <img src="assets/img/gabi/windows.jpeg">
-            </figure>
-            <figure class="gif">
-                <img src="assets/img/gabi/download.gif">
-            </figure>
+        <!-- Player de Rádio -->
+        <div class="radio-container paused">
+            <div class="radio-header">
+                <div class="radio-controls">
+                    <div class="radio-indicator"></div>
+                    <span class="now-playing"></span>
+                </div>
+                <span class="radio-title">♫ Rádio J-POP Gabi & Naoji ♫</span>
+            </div>
+
+            <audio id="radio-player" controls preload="none">
+                <source src="https://kathy.torontocast.com:3060/;?type=http&nocache=1614591208" type="audio/mpeg">
+                Seu navegador não suporta áudio HTML5.
+            </audio>
+            <div class="custom-controls">
+                <button id="play-btn" class="play">▶️</button>
+                <input type="range" id="volume-control" min="0" max="1" step="0.01" value="1">
+            </div>
+
         </div>
-        <section>
+
+        <section class="centered-content">
             <div class="dashboard">
                 <div class="window-bar">
                     <p>Gabrielle Lie Takatsuka Fukamati!</p>
                 </div>
 
                 <div class="profile">
-                    <h2 class="title">Enfim 1 ano...</h2>
-                    <p class="text">E para comemorar essa data tão especial, preparei uma surpresa especial para você!
+                    <h2 class="title">Enfim 2 anos...</h2>
+                    <p class="text">E para comemorar essa data tão especial, preparei uma (não tão) surpresa especial
+                        para você!
                         🌞</p>
                 </div>
 
                 <div class="tabs">
                     <button class="tab" onclick="openCity(event, 'Cartinha')">Cartinha</button>
-                    <button class="tab" onclick="openCity(event, 'Surpresa')">Supresa</button>
-                    <button class="tab" onclick="openCity(event, 'Datas')">2 anos</button>
+                    <button class="tab" onclick="openCity(event, 'Datas')">3 anos</button>
                     <button class="tab" onclick="openCity(event, 'Galeria')">Galeria</button>
-                    <button class="tab" onclick="openCity(event, 'Player')">Player</button>
-                    <button class="tab" onclick="openCity(event, 'Playlist')">Playlist</button>
                 </div>
             </div>
 
@@ -100,150 +114,380 @@
                 </div>
 
                 <div class="inside">
-                    <h2>BiBi,</h2>
+                    <h2>Vida,</h2>
                     <br>
-                    <p>Faz 1 ano que estamos juntos!
-                        <br><br>
-                        E mesmo assim consigo sentir que já estamos juntos há 5
-                        anos, né? Parece que foi ontem que tivemos nosso primeiro match no tinder e eu já sabia que você
-                        era especial.
-                        <br><br>
-                        Lembrar do nosso primeiro encontro… é engraçado pensar que o Pyong nos uniu e o que te marcou
-                        nesse dia foi a empada (o que me marcou foi que roubaram meu café). E quando você quase
-                        atropelou várias pessoas no Ibira, eu percebi o quanto sou sortudo por ter você ao meu lado (e
-                        não na minha frente).
-                        <br><br>
-                        Cada dia ao seu lado tem sido uma nova aventura. Adoro como rimos das coisas mais bobas, como
-                        você sempre sabe o que dizer quando eu estou pra baixo, e como cada momento simples vira
-                        especial com você.
-                        <br><br>
-                        Outro momento querido foi quando a gente veio pela primeira vez para o Butantã, apesar de tudo
-                        que houve no dia, senti que nós ficamos muito próximos.
-                        <br><br>
-                        Obrigado por ser minha parceira em tudo, por me entender, me apoiar e me fazer
-                        tão feliz. Você é a melhor parte dos meus dias e, com você, tudo fica melhor.Vamos continuar
-                        criando memórias
-                        incríveis juntos.
-                        <br><br>
-                        Este é só o começo da nossa jornada e eu mal posso esperar para ver o que o futuro nos reserva.
-                        (na vdd vc
-                        vai me levar pro Japão)
-                        <br><br>
-                        Te amo muito!
-                        <br><br>
-                        Beijos,
-                        <br><br>
-                        <strong>Nana</strong>
+                    <p>Feliz dois anos de namoro! ❤️</p>
+                    <br>
+                    Espero que esteja feliz assim como eu estou. Dois anos se passaram rápido demais e, mesmo assim,
+                    parece que já te
+                    conheço há décadas. Confesso que estou escrevendo essa cartinha atrasadamente porque eu não sei
+                    escrever e estava sem
+                    ideia do que falar, pois não estaria no nível das coisas que você faz pra mim. Todos os seus
+                    presentes e cartas são tão
+                    bons que fico com receio de fazer algo ruim pra você. Mas essa cartinha é de coração e "IA
+                    less".
+                    <br><br>
+                    A minha vida tá um caos recentemente, com a minha mãe começando a trabalhar e cada semana uma
+                    bomba nova no meu serviço.
+                    Mas o que me conforta e me traz um pouco de sossego é saber que você vai estar me esperando no
+                    fim de semana, para me
+                    acalmar e me fazer dormir tranquilamente. Até porque só com você eu consigo fazer isso. Quero
+                    muito receber um aumento
+                    ou uma proposta de um trabalho melhor pra podermos, enfim, morar juntos e começarmos a construir
+                    de fato algo nosso. Por
+                    enquanto, temos um cachorro e um colchão.
+                    <br><br>
+                    E o que eu mais quero, além de morar com você, é viajar com você. Talvez não seja pro Japão a
+                    nossa primeira viagem, mas eu
+                    ficaria feliz só de estarmos sozinhos um final de semana em qualquer lugar do mundo.
+                    <br><br>
+                    Eu queria saber te confortar melhor, igual você faz comigo, porque sempre que você me fala sobre
+                    suas coisas e episódios, como do seu pai ou do cabelo, eu nunca sei ao certo como te fazer melhorar.
+                    Mas saiba que eu
+                    sempre vou estar aqui
+                    pra você, pro que der e vier.
+                    <br><br>
+                    Feliz dois anos de namoro. Essa carta não ficou nem um pouco do jeito que eu esperava, mas
+                    acredito que eu consegui
+                    passar um pouco do que eu estou sentindo.
+                    <br><br>
+                    Vamos comemorar no Paquito!!
+                    <br><br>
+                    Te amo,
+                    <br><br>
+                    <strong>Nana</strong>
                     </p>
 
                 </div>
             </div>
 
-            <div id="Surpresa" class="tabcontent">
-                <div class="item-bar">
-                    <h3>Surpresa!</h3>
-                    <span onclick="this.parentElement.parentElement.style.display='none'" class="topright">
-                        X
-                    </span>
-                </div>
 
-                <div class="inside" style="display: grid; place-items: center; padding: 20px;">
-                    <div class="caixinha" onclick="abrirSurpresa()">
-                        <div class="conteudo">
-                            Clique para uma surpresa!
-                        </div>
-                    </div>
+    </div>
 
-                </div>
-            </div>
-
-            <div id="Datas" class="tabcontent">
-                <div class="item-bar">
-                    <h3>Contador</h3>
-                    <span onclick="this.parentElement.parentElement.style.display='none'" class="topright">
-                        X
-                    </span>
-                </div>
-                <div class="inside">
-                    <div id="countdown">
-                        <b>2 anos</b>
-                        <div id="countdown-timer"></div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div id="Galeria" class="tabcontent">
-                <div class="item-bar">
-                    <h3>Galeria</h3>
-                    <span onclick="this.parentElement.parentElement.style.display='none'" class="topright">
-                        X
-                    </span>
-                </div>
-                <div class="inside">
-
-
-                    <div id="container">
-                        <img id="image" src="assets/img/gabi/1.jpg">
-                        <img id="image" src="assets/img/gabi/2.jpg">
-                        <img id="image" src="assets/img/gabi/3.jpg">
-                        <img id="image" src="assets/img/gabi/4.jpg">
-                        <img id="image" src="assets/img/gabi/5.jpg">
-                        <img id="image" src="assets/img/gabi/6.jpg">
-
-                    </div>
-                </div>
-
-            </div>
-
-            <div id="Player" class="tabcontent">
-                <div class="item-bar">
-                    <h3>Player</h3>
-                    <span onclick="this.parentElement.parentElement.style.display='none'" class="topright">
-                        X
-                    </span>
-                </div>
-                <div class="inside">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/hLvWy2b857I?si=fEcmKKbE8_k7Oro6"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-
-            </div>
-
-            <div id="Playlist" class="tabcontent">
-                <div class="item-bar">
-                    <h3>Playlist</h3>
-                    <span onclick="this.parentElement.parentElement.style.display='none'" class="topright">
-                        X
-                    </span>
-                </div>
-                <div style="display: grid; place-items: center; padding: 20px;">
-                    <iframe style="border-radius:12px; "
-                        src="https://open.spotify.com/embed/playlist/3pk98TitXTvSRp81pAkKkT?utm_source=generator"
-                        width="85%" height="152" frameBorder="0" allowfullscreen=""
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                        loading="lazy"></iframe>
-                </div>
-
-            </div>
-        </section>
-        <div id="y2k-content" class="y2k-content" style="width: 500px;">
-            <figure class="gif" style="height: fit-content;">
-                <img src="assets/img/gabi/heart.gif">
-            </figure>
-            <figure class="gif" style="transform: scale(0.25); height: 50px;">
-                <img src="assets/img/gabi/star.gif">
-            </figure>
-            <figure class="gif">
-                <img src="assets/img/gabi/phone.gif">
-            </figure>
+    <div id="Datas" class="tabcontent">
+        <div class="item-bar">
+            <h3>Contador</h3>
+            <span onclick="this.parentElement.parentElement.style.display='none'" class="topright">
+                X
+            </span>
         </div>
+        <div class="inside">
+            <div id="countdown">
+                <b>3 anos</b>
+                <div id="countdown-timer"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="Galeria" class="tabcontent">
+        <div class="item-bar">
+            <h3>Galeria</h3>
+            <span onclick="this.parentElement.parentElement.style.display='none'" class="topright">
+                X
+            </span>
+        </div>
+        <div class="inside gallery-container">
+            <h3 class="gallery-title">Nossos momentos juntos ❤️</h3>
+
+            <div class="gallery-wrapper">
+                <div class="gallery-item" data-image="assets/img/gabi/1.jpg"
+                    data-caption="Nossa primeira viagem de avião juntos">
+                    <img src="assets/img/gabi/1.jpg" alt="Foto 1">
+                    <div class="gallery-caption">Nossa primeira viagem de avião juntos</div>
+                </div>
+                <div class="gallery-item" data-image="assets/img/gabi/2.jpg" data-caption="Coraçãozinho">
+                    <img src="assets/img/gabi/2.jpg" alt="Foto 2">
+                    <div class="gallery-caption">Coraçãozinho ❤️</div>
+                </div>
+                <div class="gallery-item" data-image="assets/img/gabi/3.jpg" data-caption="Dia que tive dor de barriga">
+                    <img src="assets/img/gabi/3.jpg" alt="Foto 3">
+                    <div class="gallery-caption">Dia que tive dor de barriga</div>
+                </div>
+                <div class="gallery-item" data-image="assets/img/gabi/4.jpg" data-caption="Girassol">
+                    <img src="assets/img/gabi/4.jpg" alt="Foto 4">
+                    <div class="gallery-caption">Girassol 🌻</div>
+                </div>
+                <div class="gallery-item" data-image="assets/img/gabi/5.jpg" data-caption="Primeira Maratona">
+                    <img src="assets/img/gabi/5.jpg" alt="Foto 5">
+                    <div class="gallery-caption">Primeira Maratona</div>
+                </div>
+                <div class="gallery-item" data-image="assets/img/gabi/6.jpg" data-caption="Dia de ficar queimado">
+                    <img src="assets/img/gabi/6.jpg" alt="Foto 6">
+                    <div class="gallery-caption">Dia de ficar queimado</div>
+                </div>
+            </div>
+
+            <!-- Modal para exibição ampliada da imagem -->
+            <div id="gallery-modal" class="gallery-modal">
+                <span class="gallery-modal-close" onclick="closeGalleryModal()">&times;</span>
+                <div class="gallery-modal-content">
+                    <div class="loading-indicator"></div>
+                    <img id="gallery-modal-image"
+                        onload="this.style.opacity='1'; document.querySelector('.loading-indicator').style.display='none';"
+                        onerror="this.src='assets/img/gabi/heart.gif'; this.onerror=null;">
+                    <div class="gallery-modal-caption"></div>
+                    <div class="gallery-page-indicator">
+                        <span id="current-page">1</span>/<span id="total-pages">6</span>
+                    </div>
+                    <div class="gallery-modal-navigation">
+                        <button class="gallery-nav-btn prev" id="prev-btn" onclick="changeGalleryImage(-1)">❮</button>
+                        <button class="gallery-nav-btn next" id="next-btn" onclick="changeGalleryImage(1)">❯</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    </section>
     </div>
 
     <script src="assets/js/randomizeCursor.js"></script>
     <script src="assets/js/gabi.js"></script>
+    <script src="assets/js/gallery-fix.js"></script>
+    <script src="assets/js/password.js"></script>
+    <script src="assets/js/date-generator.js"></script>
+    <script src="assets/js/countdown.js"></script>
+    <script src="assets/js/radio.js"></script>
+    <script>
+        // Script adicional para gerenciar os modais e botões de navegação
+        document.addEventListener('DOMContentLoaded', function () {
+            // Configurar event listeners diretos para os botões de navegação
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+
+            // Função auxiliar para adicionar suporte a eventos de toque e clique
+            function addMultiEventListener(element, eventNames, handler) {
+                eventNames.forEach(eventName => {
+                    element.addEventListener(eventName, handler, { passive: false });
+                });
+            }
+
+            if (prevBtn) {
+                addMultiEventListener(prevBtn, ['click', 'touchend'], function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    changeGalleryImage(-1);
+                    console.log('Prev button clicked or tapped');
+                    return false;
+                });
+            }
+
+            if (nextBtn) {
+                addMultiEventListener(nextBtn, ['click', 'touchend'], function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    changeGalleryImage(1);
+                    console.log('Next button clicked or tapped');
+                    return false;
+                });
+            }
+
+            // Configurar observador para modais dinâmicos
+            // Isso garante que os botões da galeria funcionem mesmo dentro de modais
+            const bodyObserver = new MutationObserver(function (mutations) {
+                mutations.forEach(function (mutation) {
+                    if (mutation.addedNodes && mutation.addedNodes.length > 0) {
+                        // Verificar se algum modal foi adicionado
+                        mutation.addedNodes.forEach(function (node) {
+                            if (node.classList && node.classList.contains('modal-overlay')) {
+                                // Se é um modal de galeria, reconfigurar os botões
+                                if (node.querySelector('.gallery-wrapper')) {
+                                    const modalPrevBtn = node.querySelector('.prev-btn');
+                                    const modalNextBtn = node.querySelector('.next-btn');
+
+                                    if (modalPrevBtn) {
+                                        modalPrevBtn.addEventListener('click', function (e) {
+                                            e.preventDefault();
+                                            e.stopPropagation();
+                                            changeGalleryImage(-1);
+                                        });
+                                    }
+
+                                    if (modalNextBtn) {
+                                        modalNextBtn.addEventListener('click', function (e) {
+                                            e.preventDefault();
+                                            e.stopPropagation();
+                                            changeGalleryImage(1);
+                                        });
+                                    }
+                                }
+                            }
+                        });
+                    }
+                });
+            });
+
+            // Iniciar observação do DOM
+            bodyObserver.observe(document.body, { childList: true, subtree: true });
+
+            // Resolver problema de GIFs visíveis adicionando estilo aos elementos y2k-content
+            const style = document.createElement('style');
+            style.innerHTML = `
+                body.modal-open .y2k-content {
+                    visibility: hidden !important;
+                    display: none !important;
+                }
+                
+                /* Melhorar visualização do modal em dispositivos móveis */
+                .gallery-modal {
+                    overscroll-behavior: contain;
+                    z-index: 2000 !important; /* Garantir que fique acima de tudo */
+                }
+                
+                /* Forçar visibilidade dos botões */
+                #prev-btn, #next-btn {
+                    opacity: 1 !important;
+                    visibility: visible !important;
+                }
+                
+                /* Melhorar a visualização dos itens da galeria */
+                .modal-body .gallery-item {
+                    cursor: pointer !important;
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                }
+                
+                .modal-body .gallery-item:hover {
+                    transform: translateY(-5px) scale(1.05);
+                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+                    z-index: 5;
+                }
+                
+                /* Adicionar indicador visual de clicabilidade */
+                .modal-body .gallery-item:after {
+                    content: '';
+                    position: absolute;
+                    top: 5px;
+                    right: 5px;
+                    width: 20px;
+                    height: 20px;
+                    background-color: var(--c-hot-pink);
+                    border-radius: 50%;
+                    border: 2px solid white;
+                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+                    opacity: 0.8;
+                    transition: transform 0.2s ease;
+                }
+                
+                .modal-body .gallery-item:hover:after {
+                    transform: scale(1.2);
+                }
+            `;
+            document.head.appendChild(style);
+
+            // Adicionar suporte para swipe em dispositivos móveis
+            let touchstartX = 0;
+            let touchendX = 0;
+
+            document.getElementById('gallery-modal').addEventListener('touchstart', e => {
+                touchstartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            document.getElementById('gallery-modal').addEventListener('touchend', e => {
+                touchendX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, { passive: true });
+
+            function handleSwipe() {
+                const threshold = 50; // mínimo de pixels para considerar um swipe
+                if (touchendX < touchstartX - threshold) {
+                    // swipe para a esquerda - próxima imagem
+                    changeGalleryImage(1);
+                    console.log('Swipe left detected');
+                }
+                if (touchendX > touchstartX + threshold) {
+                    // swipe para a direita - imagem anterior
+                    changeGalleryImage(-1);
+                    console.log('Swipe right detected');
+                }
+            }
+        });
+
+        // Sobrescrever as funções originais para manter o corpo no estado correto
+        const originalOpenGalleryModal = window.openGalleryModal;
+        window.openGalleryModal = function (imageSrc, caption) {
+            document.body.classList.add('modal-open');
+            originalOpenGalleryModal(imageSrc, caption);
+
+            // Verificar se os event listeners estão configurados corretamente
+            setTimeout(() => {
+                const prevBtn = document.getElementById('prev-btn');
+                const nextBtn = document.getElementById('next-btn');
+
+                if (prevBtn && !prevBtn._hasClickListener) {
+                    prevBtn._hasClickListener = true;
+                    prevBtn.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        console.log('Late binding prev button clicked');
+                        changeGalleryImage(-1);
+                    });
+                }
+
+                if (nextBtn && !nextBtn._hasClickListener) {
+                    nextBtn._hasClickListener = true;
+                    nextBtn.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        console.log('Late binding next button clicked');
+                        changeGalleryImage(1);
+                    });
+                }
+            }, 100);
+        };
+
+        const originalCloseGalleryModal = window.closeGalleryModal;
+        window.closeGalleryModal = function () {
+            originalCloseGalleryModal();
+            setTimeout(() => {
+                document.body.classList.remove('modal-open');
+            }, 300);
+        };
+
+        // Função para verificar e corrigir os cliques da galeria dentro dos modais
+        function fixModalGalleryClicks() {
+            console.log("Verificando cliques da galeria no modal...");
+
+            // Buscar todos os modais abertos que contenham gallery-items
+            const modalOverlays = document.querySelectorAll('.modal-overlay');
+            modalOverlays.forEach(overlay => {
+                const galleryItems = overlay.querySelectorAll('.gallery-item');
+                if (galleryItems && galleryItems.length > 0) {
+                    console.log("Encontrado modal com galeria:", galleryItems.length, "imagens");
+
+                    galleryItems.forEach(item => {
+                        const imgSrc = item.getAttribute('data-image');
+                        const caption = item.getAttribute('data-caption');
+
+                        if (imgSrc) {
+                            // Adicionar a função de clique
+                            item.onclick = function (e) {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                openGalleryModal(imgSrc, caption);
+                                return false;
+                            };
+
+                            // Imagem dentro do item
+                            const img = item.querySelector('img');
+                            if (img) {
+                                img.onclick = function (e) {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    openGalleryModal(imgSrc, caption);
+                                    return false;
+                                };
+                            }
+                        }
+                    });
+                }
+            });
+        }
+
+        // Executar esta função periodicamente para garantir que os cliques funcionem
+        setInterval(fixModalGalleryClicks, 1000);
+    </script>
 </body>
 
 </html>

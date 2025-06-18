@@ -1,0 +1,190 @@
+/* Estilos para o player de rádio */
+.radio-container {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, #ff6ec4, #7873f5);
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 20;
+  position: sticky;
+  top: 10px;
+}
+
+.radio-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 20px;
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  font-family: "Orbitron", sans-serif;
+  cursor: pointer;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.radio-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 40%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-25deg);
+  transition: 0.5s ease;
+}
+
+.radio-container:hover .radio-header::before {
+  left: 150%;
+}
+
+.radio-title {
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+  letter-spacing: 1px;
+}
+
+.radio-controls {
+  display: flex;
+  align-items: center;
+}
+
+.radio-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  /* background-color: #4eff4e; */
+  /* box-shadow: 0 0 10px #4eff4e; */
+  margin-right: 8px;
+  animation: pulse 1.5s infinite;
+}
+
+.now-playing {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.radio-container iframe {
+  width: 100%;
+  height: 80px;
+  border: none;
+  background-color: transparent;
+}
+
+/* Animação pulsante para o indicador */
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0.6;
+    transform: scale(0.8);
+  }
+}
+
+/* Estado pausado */
+.radio-container.paused .radio-indicator {
+  animation: none;
+}
+
+/* Animação da borda quando está tocando */
+.radio-container:not(.paused) {
+  animation: borderGlow 3s infinite alternate;
+}
+
+@keyframes borderGlow {
+  0% {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    box-shadow: 0 8px 25px rgba(255, 106, 196, 0.7);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .radio-container {
+    width: 95%;
+  }
+
+  .radio-title {
+    font-size: 16px;
+  }
+
+  .now-playing {
+    font-size: 12px;
+  }
+}
+
+/* Oculta o player nativo */
+audio {
+  display: none;
+}
+
+/* Controles personalizados */
+.custom-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+}
+
+#play-btn {
+  background: white;
+  color: #4e4eff;
+  font-size: 20px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#play-btn:hover {
+  background: #ececff;
+  transform: scale(1.05);
+}
+
+/* Slider de volume */
+#volume-control {
+  width: 120px;
+  appearance: none;
+  height: 6px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #4e4eff 0%, #7873f5 100%);
+  outline: none;
+  transition: 0.3s;
+}
+
+#volume-control::-webkit-slider-thumb {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+#volume-control::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+}

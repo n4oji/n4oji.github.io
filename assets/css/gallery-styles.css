@@ -1,0 +1,347 @@
+/* Estilos da Galeria */
+.gallery-container {
+  padding: 20px;
+  scroll-behavior: smooth;
+}
+
+.gallery-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #fff;
+  font-size: 2em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
+  justify-content: center;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) translateZ(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) translateZ(0);
+  }
+}
+
+.gallery-item {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+/* Adiciona um delay incremental para cada elemento da galeria */
+.gallery-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.gallery-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.gallery-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.gallery-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.gallery-item:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.gallery-item:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer !important;
+  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
+    box-shadow 0.3s ease;
+  position: relative;
+  will-change: transform, box-shadow;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item:focus-within {
+  outline: 3px solid var(--c-hot-pink);
+  transform: translateY(-5px) scale(1.02) translateZ(0);
+  -webkit-transform: translateY(-5px) scale(1.02) translateZ(0);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05) translateZ(0);
+  -webkit-transform: scale(1.05) translateZ(0);
+}
+
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: #fff;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(20px) translateZ(0);
+  -webkit-transform: translateY(20px) translateZ(0);
+  transition: opacity 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  text-align: center;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.gallery-item:hover .gallery-caption {
+  opacity: 1;
+  transform: translateY(0) translateZ(0);
+  -webkit-transform: translateY(0) translateZ(0);
+}
+
+/* Estilos do Modal */
+.gallery-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.98);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-modal-content {
+  position: relative;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  max-width: 80%;
+}
+
+.gallery-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1001;
+  transition: color 0.3s;
+}
+
+.gallery-modal-close:hover {
+  color: #ff69b4;
+  text-shadow: 0 0 10px #ff69b4;
+}
+
+#gallery-modal-image {
+  max-height: 80vh;
+  max-width: 90%;
+  border-radius: 5px;
+  box-shadow: 0 0 30px rgba(255, 105, 180, 0.3);
+  animation: modal-image-appear 0.5s ease;
+  transition: opacity 0.2s ease;
+}
+
+#gallery-modal-image:hover {
+  box-shadow: 0 0 40px rgba(255, 105, 180, 0.5);
+}
+
+@keyframes modal-image-appear {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.gallery-modal-caption {
+  color: #fff;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.gallery-modal-navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.gallery-nav-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.gallery-nav-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.7);
+}
+
+.gallery-nav-btn:hover {
+  background: rgba(255, 105, 180, 0.6);
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.prev {
+  margin-left: 20px;
+}
+
+.next {
+  margin-right: 20px;
+}
+
+/* Loading indicator para quando a imagem está carregando */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-indicator {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  border-top: 5px solid var(--c-hot-pink);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: none;
+}
+
+/* Estilo para imagens pré-carregadas */
+.gallery-item.image-ready {
+  position: relative;
+}
+
+/* Removido o indicador de bolinha verde conforme solicitado */
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+  .gallery-wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-gap: 15px;
+  }
+
+  .gallery-item img {
+    height: 150px;
+  }
+
+  .gallery-nav-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  #gallery-modal-image {
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    grid-gap: 10px;
+  }
+
+  .gallery-item img {
+    height: 120px;
+  }
+
+  .gallery-caption {
+    font-size: 0.8em;
+    padding: 5px;
+  }
+
+  .gallery-modal-caption {
+    font-size: 1.2em;
+  }
+
+  .gallery-nav-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+
+  .gallery-modal-content {
+    max-width: 95%;
+  }
+
+  .prev {
+    margin-left: 5px;
+  }
+
+  .next {
+    margin-right: 5px;
+  }
+
+  .gallery-title {
+    font-size: 1.5em;
+  }
+}
